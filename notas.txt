@@ -13,6 +13,7 @@ docker compose exec backend sh
 
 
 Orden de creacion de las apis
+Para instalar un entorno de trabajo virtual en los proyectos se usa lo siguiente
 
 Con este comando podemos entrar a los contendores del docker
 sirve para hacer comandos desde esa terminal
@@ -27,4 +28,5 @@ python3 manage.py migrate
 Para añadir un nuevo modelo en el programa
 python3 manage,py startapp "Nombre" <---- va sin comillas doble en la tarminal
 
- 
+ Para instalar las dependecias del proyecto se usa este codigo 
+ python -m pip install -r requirements.txt
