@@ -1,0 +1,30 @@
+Esto se maneja por MVT que es Modelo, vista y temples es casi lo mismo que MVC
+
+Los serializadores sirven mas que nada para saber lo que entra y sale del programa se usan mas saber cual es el flujo que tiene este mismo programa
+de igual forma sirve sirven para no declarar varias veces las misma cosa es mejor hacerlo todo de seguido
+
+
+Con el tema de las rutas hoy dos formas de trabajarlas una es un set y el otro el basico con el set solo necesitamos declarar nuestras rutas en nuestro arichivo de la pp sin tener que declararlas todas en otro archivo y con eso se puede halbar solo al archivo para ya tener todas las rutas definidas
+Con esta parte le podemos poner los requisitos que queramos a las tablas ya que puede ser importante para el desarrollo de estas
+class Meta:
+        db_table = 'IncidenceAbsenteeism'
+
+docker compose exec backend sh
+
+
+Orden de creacion de las apis
+
+Con este comando podemos entrar a los contendores del docker
+sirve para hacer comandos desde esa terminal
+^docker compese exec backend sh^
+
+Este comando sirve para crear la migracion del modelo para que tengamos el contructor de la tabla de la base de datos
+python3 manage.py makemigrations
+
+Y esta comando sirve para migrar las tablas al gestor de base de datos el cual se dea usar
+python3 manage.py migrate
+
+Para añadir un nuevo modelo en el programa
+python3 manage,py startapp "Nombre" <---- va sin comillas doble en la tarminal
+
+ 
