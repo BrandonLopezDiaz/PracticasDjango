@@ -1,5 +1,6 @@
 from rest_framework.routers import DefaultRouter
-from posts.api.views import PostViewSet, PostModelViewSet
+from posts.api.views import PostModelViewSet
+from posts.views import HelloWorld
 
 router_post = DefaultRouter()
 

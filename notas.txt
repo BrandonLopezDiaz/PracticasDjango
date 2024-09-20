@@ -15,6 +15,7 @@ docker compose exec backend sh
 Orden de creacion de las apis
 Para instalar un entorno de trabajo virtual en los proyectos se usa lo siguiente
 
+
 Con este comando podemos entrar a los contendores del docker
 sirve para hacer comandos desde esa terminal
 ^docker compese exec backend sh^

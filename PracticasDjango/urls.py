@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from posts.api.router import router_post
-
+from PracticasDjango.views import saludo
+from posts.views import HelloWorld
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_post.urls)),
+    path('vista/', view=saludo),     
+    path('quiensoy/', HelloWorld.as_view()), 
     path('api-auth/', include('rest_framework.urls'))
 
 ]

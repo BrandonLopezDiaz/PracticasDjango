@@ -7,3 +7,5 @@ class Post (models.Model):
     description = models.TextField()
     orden = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
+    #Forma de subir archivos
+    # archivo = models.FileField(upload_to="uploads/")
