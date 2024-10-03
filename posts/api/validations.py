@@ -10,5 +10,4 @@ posts_scheme = base_query_params_schema.extend(
         'orden': IntegerLike(),
         'created_at': DatetimeWithTZ(),
     }
-
 )

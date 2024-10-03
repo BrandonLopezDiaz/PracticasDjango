@@ -27,7 +27,18 @@ Y esta comando sirve para migrar las tablas al gestor de base de datos el cual s
 python3 manage.py migrate
 
 Para añadir un nuevo modelo en el programa
-python3 manage,py startapp "Nombre" <---- va sin comillas doble en la tarminal
+python3 manage.py startapp "Nombre" <---- va sin comillas doble en la tarminal
+
+Crear entorno virtual el donde podemos trabajar 
+python -m venv dependecias-env
 
  Para instalar las dependecias del proyecto se usa este codigo 
  python -m pip install -r requirements.txt
+
+
+ Los nombres deben ser los exactos ya que esos se reutilizan por las librerias, si no porque se reutilizan ejemplo: filter_mappings si le falta algo no se va a llamar las funciones correspondiente. 
+
+ Estructuras del programa los filters son los filtros para la busquedas mediantes atributos con eso puedes obtener todo, router son las rutas para hablar a tu views para enviar la apis en las rutas,
+ validations son las validaciones del tipo de dato que se estan recibiendo la api, el view es la logica del programa para el uso de la aplicion con este apartado se hacen las funciones de los datos
+
+ 

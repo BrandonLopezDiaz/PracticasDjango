@@ -6,12 +6,22 @@ from posts.api.Serializers import PostSerializer
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from posts.api.permissions import IsAdminOrReadOnly
 from posts.api.filters import PostsFilter
+from filters.mixins import FiltersMixin
+from rest_framework.pagination import LimitOffsetPagination
+
+class MyCustomPagination(LimitOffsetPagination):
+    pass
+
 #Usando de esta manera la clase sirve para crear un crud completo
 #De igual forma sirve para autentificacion y permisos del usuario
-class PostModelViewSet(ModelViewSet, PostsFilter ):
+class PostModelViewSet(PostsFilter,FiltersMixin, ModelViewSet  ):
     serializer_class = PostSerializer
     queryset = Post.objects.all()
     model = Post
+    pagination_class = MyCustomPagination
+    def get_queryset(self):
+        return self.filter_queryset(super().get_queryset())
+
     # permission_classes = [IsAdminOrReadOnly]
     #en esta linea le podemos decir que solo queremos esos metodos del crud
     #http_method_names = ['get','put', 'delete', 'patch']
