@@ -9,8 +9,8 @@ class MyCustomPagination(LimitOffsetPagination):
     pass
 
 class AccesoModelViewSet(AccesosFilter,FiltersMixin, ModelViewSet  ):
-    serializer_class = AccesoSerializer
     queryset = acceso.objects.all()
+    serializer_class = AccesoSerializer
     model = acceso
     pagination_class = MyCustomPagination
     def get_queryset(self):

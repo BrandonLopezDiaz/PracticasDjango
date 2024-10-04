@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'posts',
     'documento',
-    'acceso'
+    'acceso',
+    'user',
+    'temario',
 
 ]
 REST_FRAMEWORK = {

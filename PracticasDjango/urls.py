@@ -20,12 +20,16 @@ from PracticasDjango.views import saludo
 from posts.views import HelloWorld
 from documento.router import router_documento
 from acceso.router import router_acceso
+from user.router import router_user
+from temario.router import router_temario
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_post.urls)),
     path('prueba/',include(router_documento.urls)),
     path('acceso/',include(router_acceso.urls)),
-    path('vista/', view=saludo()),     
+    path('user/',include(router_user.urls)),
+    path('temario/',include(router_temario.urls)),
+    path('vista/', view=saludo),     
     path('quiensoy/', HelloWorld.as_view()), 
     path('api-auth/', include('rest_framework.urls'))
 

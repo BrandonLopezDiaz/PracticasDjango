@@ -3,4 +3,4 @@ from acceso.models import acceso
 
 @admin.register(acceso)
 class accesoAdmin(admin.ModelAdmin):
-    list_display = ['title' ,'acceso']
+    list_display = ['id' ,'acceso']
