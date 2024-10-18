@@ -23,3 +23,4 @@ class SubTemasModelViewSet(TemasFilter,FiltersMixin, ModelViewSet  ):
     pagination_class = MyCustomPagination
     def get_queryset(self):
         return self.filter_queryset(super().get_queryset())
+    

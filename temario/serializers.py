@@ -16,7 +16,6 @@ class TemasSerializer(TemasGenericSerializer):
         fields = ['id','titulo', 'descripcion', 'video_url', 'imagen_url','subtemas_relacion']
 
 class SubTemasSerializer(TemasGenericSerializer):
-    # Temas = serializers.StringRelatedField(many=True, read_only=True)
     class Meta:
         model = SubTemas
         fields = ['id','titulo', 'descripcion', 'video_url', 'imagen_url','tema']

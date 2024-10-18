@@ -25,6 +25,7 @@ python3 manage.py makemigrations
 
 Y esta comando sirve para migrar las tablas al gestor de base de datos el cual se dea usar
 python3 manage.py migrate
+python3 manage.py migrate_schemas --shared   
 
 Para añadir un nuevo modelo en el programa
 python3 manage.py startapp "Nombre" <---- va sin comillas doble en la tarminal
@@ -41,4 +42,5 @@ python -m venv dependecias-env
  Estructuras del programa los filters son los filtros para la busquedas mediantes atributos con eso puedes obtener todo, router son las rutas para hablar a tu views para enviar la apis en las rutas,
  validations son las validaciones del tipo de dato que se estan recibiendo la api, el view es la logica del programa para el uso de la aplicion con este apartado se hacen las funciones de los datos
 
- 
+ Para crear los contendores usa este comando 
+ docker compose up --build
